@@ -1,0 +1,22 @@
+Authorization  code flow :-
+
+    1. The client (an application that wants to access protected resources on behalf of the user) initiates the authorization request by redirecting the user's browser to the authorization server (e.g. Google, Facebook, etc.) with the following parameters:
+        ◦ response_type=code: Indicates that the authorization server should return an authorization code.
+        ◦ client_id: Identifies the client application making the request.
+        ◦ redirect_uri: Specifies the URL to which the authorization server should redirect the user's browser after the user grants or denies consent.
+        ◦ scope: Specifies the scope of access requested by the client.
+    2. The authorization server authenticates the user (if necessary) and asks the user to grant or deny consent to the requested scopes.
+    3. If the user grants consent, the authorization server returns an authorization code to the client via the redirect_uri.
+    4. The client exchanges the authorization code for an access token by sending a request to the authorization server with the following parameters:
+        ◦ grant_type=authorization_code: Indicates that the client is requesting an access token using an authorization code.
+        ◦ code: The authorization code received in step 3.
+        ◦ redirect_uri: Must match the value used in step 1.
+        ◦ client_id and client_secret: Identifies the client and provides authentication credentials.
+    5. If the authorization server verifies the client credentials and the authorization code, it returns an access token to the client.
+    6. The client uses the access token to access protected resources on behalf of the user.
+
+
+
+image one :---    https://drive.google.com/drive/folders/1sZ7W0tD-OQYavdzmqXuvVsIlTuqMWxMv
+image two :----   https://drive.google.com/drive/folders/1sZ7W0tD-OQYavdzmqXuvVsIlTuqMWxMv
+
