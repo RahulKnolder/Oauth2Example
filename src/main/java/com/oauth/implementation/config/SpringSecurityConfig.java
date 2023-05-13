@@ -7,8 +7,8 @@ import org.springframework.security.web.SecurityFilterChain;
 
 
 @Configuration
-public class SpringSecurityConfig {
 
+public class SpringSecurityConfig {
 
     // This is a method that creates a SecurityFilterChain for an OAuth2-secured web application
     @Bean
